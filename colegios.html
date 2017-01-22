@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Mujeres que hacen escuela</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, target-densitydpi=device-dpi, initial-scale=0, maximum-scale=1, user-scalable=yes" />
+		<html lang="es"> 
+		<link href="css/jquery-jvectormap-1.2.2.css" rel="stylesheet" type="text/css">
+		<link href="css/colegios.css" rel="stylesheet" type="text/css">		
+		<script src="js/jquery-1.12.1.min.js"></script>
+		<script src="js/jquery-jvectormap-1.2.2.min.js"></script>
+		<script src="js/colegios.js"></script>
+		<script src="js/colegiosInfo.js"></script>
+		<script src="js/biografias.js"></script>
+		<script src="js/biografiasESK.js"></script>
+		<script src="maps/espana.js"></script>
+		<script src="maps/galicia.js"></script>
+		<script src="maps/laRioja.js"></script>
+		<script src="maps/madrid.js"></script>
+		<script src="maps/cantabria.js"></script>
+		<script src="maps/baleares.js"></script>
+		<script src="maps/canarias.js"></script>
+		<script src="maps/ceuta.js"></script>
+		<script src="maps/melilla.js"></script>
+		<script src="maps/extremadura.js"></script>
+		<script src="maps/andalucia.js"></script>
+		<script src="maps/cataluna.js"></script>
+		<script src="maps/paisVasco.js"></script>
+		<script src="maps/murcia.js"></script>
+		<script src="maps/navarra.js"></script>		
+		<script src="maps/valencia.js"></script>		
+		<script src="maps/castillaLeon.js"></script>
+		<script src="maps/asturias.js"></script>
+		<script src="maps/aragon.js"></script>
+		<script src="maps/castillaLaMancha.js"></script>
+	</head>
+	
+	<body>
+		<div class="divContenedor">
+			<div id="columnaCentral" class="columnaCentral">
+				<div id="cabeceraPagina" class="cabeceraPagina">
+					<img class="logoPagina" src="img/cabecera.jpg">
+					<p>Mapa interactivo de los centros educativos con nombre de mujer</p>
+				</div>
+				<div id="mapaContainer" class="mapaContainer">
+					<div id="mapaCover" class="mapaCover">
+					</div>
+					<div id="datosColegio" class="datosColegio">
+						<div id="detallesColegio" class="detallesColegio">
+						</div>
+						<div id="biografia" class="biografia">
+						</div>
+					</div>
+					<div id="mapa" class="mapa">
+					</div>
+				</div>
+				<div id="texto" class="texto">
+					<div id="btnVolver" class="btnVolver">
+					</div>
+					<div id="infoZona">
+					</div>
+					<ul id="listaColegios" class="listaColegios">
+					</ul>
+				</div>	
+				<div id="footer_push"></div>
+				<div id="piePagina" class="piePagina">
+					<p><strong>FEDERACIÓN ESTATAL DE ENSEÑANZA DE CCOO</strong>, C/ Ramírez de Arellano, 19, 4ª planta, 28043 Madrid, Teléfono: <a href="" id="ph"></a> , E-mail: <a href="" id="em"></a></p>
+				</div>
+			</div>	
+		</div>
+		<script>
+			$(function(){
+				mapa("espana");				
+				$("#mapaCover").fadeOut();
+								
+				if( /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) ) {
+				$("#piePagina").css("position", "relative");
+					//$("#footer_push").hide();
+					var ww = ( $(window).width() < window.screen.width ) ? $(window).width() : window.screen.width; //get proper width
+					var mw = 480; // min width of site
+					var ratio =  ww / mw; //calculate ratio
+					if( ww < mw){ //smaller than minimum size
+						$('#Viewport').attr('content', 'initial-scale=' + ratio + ', maximum-scale=' + ratio + ', minimum-scale=' + ratio + ', user-scalable=yes, width=' + ww);
+					}else{ //regular size
+						$('#Viewport').attr('content', 'initial-scale=1.0, maximum-scale=2, minimum-scale=1.0, user-scalable=yes, width=' + ww);
+					}
+				}
+				
+				$("#ph").html("91 540 "+"92 03");
+				$("#ph").attr("href", "te"+"l:915409203");
+				$("#em").html("fe@"+"fe.ccoo.es");
+				$("#em").attr("href", "mail"+"to:fe@fe.ccoo.es");
+				$(".jvectormap-container")[0].click();
+			});
+		</script>		
+	</body>
+</html>

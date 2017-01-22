@@ -1,0 +1,1 @@
+jQuery.fn.vectorMap('addMap', 'melilla', {"width":650,"height":500,"paths":{"melilla":{"name":"name0","path":"m458.95 312.33 0.00 -100.69L419.50 69.65 348.26 25.47 303.18 108.23 325.00 210.31Z"}}});

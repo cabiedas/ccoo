@@ -1,0 +1,230 @@
+html{
+	height:100%;
+}
+body{
+	background-image: url('../img/bgGeneral.gif');
+	background-position: center top;
+	background-repeat: repeat-y;
+	
+	font-family: Verdana, Arial, Helvetica, Sans-Serif;
+	font-size: 12px;
+	font-weight: normal;
+	font-style: normal;
+	color: #666;
+	line-height: 18px;
+	-webkit-text-size-adjust: none;
+	
+	margin:0px;
+	padding:0px;
+	height:100%;
+    min-height: 700px;
+	/*overflow:hidden;*/
+}
+
+.divContenedor{
+	width:100%;
+	height: auto !important;
+	min-height: 700px;
+	
+	background-image: url('../img/bgDetalle.jpg');
+	background-position: center top;
+	background-repeat: no-repeat;
+	overflow:hidden;
+}
+
+.columnaCentral{
+	width:1000px;
+	margin-left: auto;
+	margin-right: auto;
+	height:100%;
+	overflow:hidden;
+}
+
+.cabeceraPagina{	
+	width:100%;
+}
+
+.cabeceraPagina p {
+	font-family: Arial, Helvetica, Verdana, Sans-Serif;
+	font-size: 14px;
+	font-weight: bold;
+	font-style: normal;
+	color: #e5241d;	
+	text-align: center;
+	text-transform: uppercase;
+	margin: 5px;
+}
+
+.logoPagina{
+	border: solid 10px rgb(238, 238, 238);
+	margin-top: 20px;
+	margin-bottom:10px;
+}
+
+#footer_push {
+	clear: both;
+    height: 50px;
+}
+.piePagina{
+	background-color: #e5241d;
+	width:1000px;
+	position:fixed;
+	bottom:0;
+	height:50px;
+	overflow: hidden;
+	margin-left: auto;
+	margin-right: auto;
+	z-index: 15;
+	color: #FFF;
+	text-align: center;
+	line-height: 25px;
+}
+
+.piePagina a,.piePagina a:visited{
+	color: #BBB;
+}
+
+.mapaContainer{
+	/* Contenedor del mapa y del cuadro que se usa para hacer los efectos de desvanecimiento */
+	position:relative;
+	width: 650px; 
+	height: 500px;
+	display: inline-block;
+	float: left;
+	border: 1px solid #BBB;
+	margin: 10px;
+}
+
+.mapa{
+	/* Mapa */
+	width: 650px; 
+	height: 500px;
+	z-index: 2;
+	overflow: hidden;
+}
+
+.mapaCover{
+	/* Cuadro para simular degradados en el mapa al activar zonas */
+	width: 650px; 
+	height: 500px;
+	background-color: #FFF;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	z-index: 10;
+	overflow: hidden;
+}
+
+.datosColegio{
+	/* Cuadro para contener toda la información del colegio y la biografía correspondiente */
+	padding: 10px;
+	width: 630px; 
+	height: 480px;
+	background-color: #FFF;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	z-index: 5;
+	#overflow: hidden;
+	display:none;
+}
+
+.texto{
+	/* Panel de navegación */
+	width: 290px;
+	height: 480px;
+	display: inline-block;
+	float: left;
+	border: 1px solid #BBB;
+	margin-right: 10px;
+	margin-top: 10px;
+	padding: 10px;
+}
+
+.cabeceraZona{
+	/* Nombre de la comunidad autónoma o la provincia */
+	font-family: Arial, Helvetica, Verdana, Sans-Serif;
+	font-size: 14px;
+	font-weight: bold;
+	font-style: normal;
+	/* text-transform: uppercase; */
+	color: #e5241d; /* #462273; */
+	margin-top: 25px;
+	margin-left:5px;
+}
+
+.detallesColegio{
+	/* texto del colegio */
+}
+
+.biografia{
+	/* texto de las biografias */
+	font-family: Arial, Helvetica, Verdana, Sans-Serif;
+	font-size: 14px;
+}
+
+.nombrePersona{
+	color: #e5241d;
+	font-weight:bold;
+}
+
+.listaColegios{
+	/* Lista de los colegios */
+	height: 370px;
+	overflow: auto;
+	list-style-type: none;
+	padding: 0px;
+}
+
+.listaColegiosEntry{
+	/* Cada línea de la lista de colegios */
+	cursor: pointer;
+	margin: 4px;
+	padding:2px;
+	outline: 1px solid #FFF
+}
+
+.listaColegiosEntry:hover{
+	/* Cada línea de la lista de colegios */
+	cursor: pointer;
+	outline: 1px solid #BBB;
+}
+
+.btnVolver{
+	margin-top: 20px;	
+}
+
+.btnVolverMapa{
+	/* Enlace que actúa como botón para volver al nivel anterior del mapa */
+	font-family: Verdana, Arial, Helvetica, Sans-Serif;
+	font-size: 12px;
+	font-weight: bold;
+	font-style: normal;
+	text-decoration: none;
+	background-color: #DDD;
+	padding: 5px;
+	color: #000;
+	margin-left:5px;
+}
+
+.btnVolverMapa:hover{
+	background-color: rgb(238, 238, 238);
+	color: #000;
+}
+
+[data-code]{
+	cursor:pointer;
+}
+
+[data-code = "portugal"],[data-code = "francia"],[data-code = "marruecos"],[data-code = "trazo"]{
+	cursor:default;
+}
+
+.desactivado{
+	cursor:default !important;
+}
+
+.jvectormap-label {
+	/* Arreglo para IE */
+	opacity:0;
+}
