@@ -2,7 +2,8 @@ html{
 	height:100%;
 }
 body{
-	background-color: pink;
+	background-color: blue;
+	/* Clase super chula */
 	background-image: url('../img/bgGeneral.gif');
 	background-position: center top;
 	background-repeat: repeat-y;
