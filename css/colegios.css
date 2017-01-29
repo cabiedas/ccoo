@@ -31,6 +31,10 @@ body{
 	overflow:hidden;
 }
 
+.ventanaAzul{
+	color:azul;
+}
+
 .columnaCentral{
 	width:1000px;
 	margin-left: auto;
